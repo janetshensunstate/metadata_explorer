@@ -1,0 +1,10 @@
+[uxb15565]
+name = "uxb15565"
+account = "uxb15565"
+user = "user.name@sunstateequip.com"
+authenticator = "externalbrowser"
+password = ""
+warehouse = "medium_analyst_wh"
+database = "prod_workspace"
+schema = "bi_tableau"
+role = "analyst_role"
