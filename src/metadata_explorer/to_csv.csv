@@ -1,0 +1,237 @@
+,database,schema,table_or_view,projectName,content_type,name,vizportalUrlId,owner_name,owner_email
+0,prod_workspace,bi_tableau,bucket_report_v6,Developer Data Sources,publishedDatasources,Pricing Distribution and Trends,63080910,Erika Yui,erika.yui@sunstateequip.com
+1,prod_reporting,rpt,dynamics_activity_history,Salesforce Reports Datasets,publishedDatasources,Dynamics CRM 18 month History,62322704,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+2,prod_reporting,rpt,rate_exceptions_salesforce,Salesforce Reports Datasets,publishedDatasources,Rate Exceptions Salesforce,61766209,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+3,prod_reporting,bi,dim_equipment_hierarchy,Developer Data Sources,publishedDatasources,Warranty Claims,61053196,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+3,prod_reporting,bi,dim_branch_hierarchy,Developer Data Sources,publishedDatasources,Warranty Claims,61053196,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+3,prod_reporting,core,warranty_claim_header,Developer Data Sources,publishedDatasources,Warranty Claims,61053196,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+3,prod_reporting,core,vendors,Developer Data Sources,publishedDatasources,Warranty Claims,61053196,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+3,prod_reporting,core,equipment_master,Developer Data Sources,publishedDatasources,Warranty Claims,61053196,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+4,prod_workspace,bi_tableau,oec_on_rent_map,Developer Data Sources,publishedDatasources,OEC on Rent Map,57762259,Janet Shen,janet.shen@sunstateequip.com
+5,prod_workspace,bi_tableau,lost_rentals_join_ntl_acct,Developer Data Sources,publishedDatasources,Lost Rentals,54698615,Curtis Baxter,curtis.baxter@sunstateequip.com
+6,prod_workspace,bi_tableau,fleet_opt_market_split,Developer Data Sources,publishedDatasources,Market Pairings Extract,66081832,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+7,prod_reporting,rpt,projected_disposals,Developer Data Sources,publishedDatasources,Projected Disposals,64026665,Grant Wallace,grant.wallace@sunstateequip.com
+7,prod_reporting,bi,dim_equipment_status,Developer Data Sources,publishedDatasources,Projected Disposals,64026665,Grant Wallace,grant.wallace@sunstateequip.com
+8,prod_workspace,analytics,equipment_transfer_rec_view,Developer Data Sources,publishedDatasources,Truck Data,60771416,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+8,prod_workspace,analytics,equipment_transfer_rec_details,Developer Data Sources,publishedDatasources,Truck Data,60771416,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+8,prod_workspace,analytics,equipment_transfer_rec_header,Developer Data Sources,publishedDatasources,Truck Data,60771416,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+8,prod_reporting,bi,utilization_lookback,Developer Data Sources,publishedDatasources,Truck Data,60771416,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+9,prod_workspace,analytics,dodge_put_in_place,Developer Data Sources,publishedDatasources,Dodge Put In Place Dollars,64988717,Matt Chatel,matt.chatel@sunstateequip.com
+10,prod_reporting,rpt,equipment_transfer_receivable,Developer Data Sources,publishedDatasources,Truck Data RPT,61627299,Curtis Baxter,curtis.baxter@sunstateequip.com
+10,prod_reporting,rpt,equipment_transfer_receivable_details,Developer Data Sources,publishedDatasources,Truck Data RPT,61627299,Curtis Baxter,curtis.baxter@sunstateequip.com
+10,prod_reporting,bi,utilization_lookback,Developer Data Sources,publishedDatasources,Truck Data RPT,61627299,Curtis Baxter,curtis.baxter@sunstateequip.com
+10,prod_reporting,rpt,equipment_transfer_receivable_header,Developer Data Sources,publishedDatasources,Truck Data RPT,61627299,Curtis Baxter,curtis.baxter@sunstateequip.com
+11,prod_reporting,bi,dim_customer,Salesforce Reports Datasets,publishedDatasources,AIS Extract,64487838,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+11,prod_reporting,bi,dim_outside_sales_managers,Salesforce Reports Datasets,publishedDatasources,AIS Extract,64487838,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+11,prod_reporting,core,account_information_ais,Salesforce Reports Datasets,publishedDatasources,AIS Extract,64487838,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+12,prod_workspace,bi_tableau,pdrate_ver7_test,Developer Data Sources,publishedDatasources,P&D Rate By Manager,60123154,Erika Yui,erika.yui@sunstateequip.com
+13,prod_workspace,bi_tableau,equipment_demand_rul,Developer Data Sources,publishedDatasources,Equipment Demand w RUL,62284880,Matt Trejo,matt.trejo@sunstateequip.com
+14,prod_reporting,rpt,active_account_with_revenue,Developer Data Sources,publishedDatasources,Active Accounts with Revenue,61957809,Erika Yui,erika.yui@sunstateequip.com
+15,js_reporting,rpt,driver_dispatch_yard,Developer Data Sources,publishedDatasources,Dispatch Data Yard,59705505,Janet Shen,janet.shen@sunstateequip.com
+16,prod_workspace,bi_tableau,income_statement_branch,Developer Data Sources,publishedDatasources,Income Statement,58603038,Matt Trejo,matt.trejo@sunstateequip.com
+17,prod_workspace,bi_tableau,equipment_details,Developer Data Sources,publishedDatasources,Equipment Rentals,58411841,Matt Trejo,matt.trejo@sunstateequip.com
+18,prod_workspace,analytics,branch_monthly_metrics,Developer Data Sources,publishedDatasources,Branch Monthly Metrics (Testing),66779450,Jon White,jon.scheaffer@sunstateequip.com
+19,prod_workspace,bi_tableau,pricing_level_change,Developer Data Sources,publishedDatasources,Pricing Level Change,54290313,Matt Trejo,matt.trejo@sunstateequip.com
+21,prod_workspace,bi_tableau,future_reservations,Developer Data Sources,publishedDatasources,Rental Returns + Reservations,66884583,Curtis Baxter,curtis.baxter@sunstateequip.com
+21,prod_workspace,bi_tableau,past_due_contracts_v2,Developer Data Sources,publishedDatasources,Rental Returns + Reservations,66884583,Curtis Baxter,curtis.baxter@sunstateequip.com
+22,prod_reporting,bi,dim_outside_sales_managers,Salesforce Reports Datasets,publishedDatasources,All RentalMan Customers,64479008,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+22,prod_reporting,core,customer_master,Salesforce Reports Datasets,publishedDatasources,All RentalMan Customers,64479008,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+23,prod_workspace,bi_tableau,remarketing_extract,Developer Data Sources,publishedDatasources,Remarketing Extract,64602617,Grant Wallace,grant.wallace@sunstateequip.com
+24,prod_reporting,rpt,open_contract_salesforce_users,Salesforce Reports Datasets,publishedDatasources,open contracts with all reps,62291526,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+25,prod_workspace,bi_tableau,transport_charge,Developer Data Sources,publishedDatasources,P&D Book Rate (Look Back),56594862,Erika Yui,erika.yui@sunstateequip.com
+26,prod_workspace,bi_tableau,remarketing_extract,Developer Data Sources,publishedDatasources,Remarketing Extract 2,57148544,Matt Trejo,matt.trejo@sunstateequip.com
+27,prod_reporting,bi,utilization_lookback,Developer Data Sources,publishedDatasources,utilization_lookback_test,64946124,Janet Shen,janet.shen@sunstateequip.com
+28,prod_workspace,bi_tableau,revenue_dashboard_nambdm_allaccts,Developer Data Sources,publishedDatasources,Revenue Detail Union,55288712,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+28,prod_workspace,bi_tableau,revenue_dashboard_report_test_2,Developer Data Sources,publishedDatasources,Revenue Detail Union,55288712,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+29,prod_workspace,bi_tableau,income_statement_branch_with_transactions,Developer Data Sources,publishedDatasources,Income Statement Vertical with Transactions,65080224,Matt Trejo,matt.trejo@sunstateequip.com
+30,prod_reporting,rpt,open_and_closed_contracts_salesforce,Salesforce Reports Datasets,publishedDatasources,Open and Closed Contracts Salesforce,61629554,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+31,prod_workspace,bi_tableau,remarketing_future_sales,Developer Data Sources,publishedDatasources,Future Remarketing Sales,55230713,Matt Trejo,matt.trejo@sunstateequip.com
+32,prod_workspace,bi_tableau,bp_vs_fleet_data_v2,Developer Data Sources,publishedDatasources,BP vs Fleet unpivoted,59138300,Matt Trejo,matt.trejo@sunstateequip.com
+33,prod_reporting,rpt,dispatch_main,Developer Data Sources,publishedDatasources,Dispatch Data,64203276,Janet Shen,janet.shen@sunstateequip.com
+34,prod_workspace,analytics,revenue,Developer Data Sources,publishedDatasources,Revenue,61766825,Matt Chatel,matt.chatel@sunstateequip.com
+35,prod_reporting,bi,utilization_lookback,Developer Data Sources,publishedDatasources,Utilization Lookback,64738851,Janet Shen,janet.shen@sunstateequip.com
+36,prod_workspace,bi_tableau,branch_pulse_metrics_2,Developer Data Sources,publishedDatasources,Branch Pulse Extract,63549437,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+36,prod_workspace,bi_tableau,branch_pulse_metrics_1,Developer Data Sources,publishedDatasources,Branch Pulse Extract,63549437,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+36,prod_workspace,bi_tableau,branch_pulse_metrics_3,Developer Data Sources,publishedDatasources,Branch Pulse Extract,63549437,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+37,prod_workspace,bi_tableau,fy24_commissions_net,Developer Data Sources,publishedDatasources,FY24 Commission Net Extract,62920994,Matt Trejo,matt.trejo@sunstateequip.com
+38,prod_workspace,bi_tableau,pdrate,Developer Data Sources,publishedDatasources,P&D Rates,56594663,Erika Yui,erika.yui@sunstateequip.com
+39,prod_workspace,bi_tableau,commissions_estimate,Developer Data Sources,publishedDatasources,UES Extract,54973663,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+40,prod_workspace,analytics,vendor_spending,Developer Data Sources,publishedDatasources,Vendor Spending,61036818,Matt Chatel,matt.chatel@sunstateequip.com
+41,prod_workspace,bi_tableau,commissions_troubleshoot,Developer Data Sources,publishedDatasources,Commissions Troubleshoot,61053804,Matt Trejo,matt.trejo@sunstateequip.com
+0,prod_workspace,analytics,upcoming_exception_rate_suggestions,Pricing,workbooks,Upcoming Exception Rate Proposals,2592539,Charlotte Johnson,charlotte.johnson@sunstateequip.com
+1,prod_workspace,analytics,revenue,Gulf,workbooks,Test Trench Rev,2510237,Grant Bettinger,grant.bettinger@sunstateequip.com
+2,prod_workspace,bi_tableau,bp_vs_fleet_data_v2,Finance,workbooks,Fleet vs BP,2419758,Matt Trejo,matt.trejo@sunstateequip.com
+3,prod_reporting,rpt,open_contract_salesforce_users,Custom SQL Extract Conversion,workbooks,Open Contract Report_Home Page,2748200,Grant Wallace,grant.wallace@sunstateequip.com
+4,prod_reporting,core,territory_mapping,One - Offs,workbooks,Dodge Map,2244174,Matt Trejo,matt.trejo@sunstateequip.com
+4,prod_reporting,core,dim_date,One - Offs,workbooks,Dodge Map,2244174,Matt Trejo,matt.trejo@sunstateequip.com
+4,prod_reporting,core,dim_branch_hierarchy,One - Offs,workbooks,Dodge Map,2244174,Matt Trejo,matt.trejo@sunstateequip.com
+4,prod_reporting,core,outside_sales,One - Offs,workbooks,Dodge Map,2244174,Matt Trejo,matt.trejo@sunstateequip.com
+4,macfd_custom_forecast_sunstate,macfd,macfd_sunstate_custom_forecast,One - Offs,workbooks,Dodge Map,2244174,Matt Trejo,matt.trejo@sunstateequip.com
+4,cas_sunstate,cas,cas_master_sunstate,One - Offs,workbooks,Dodge Map,2244174,Matt Trejo,matt.trejo@sunstateequip.com
+5,prod_reporting,rpt,rate_exceptions_salesforce,Salesforce Dashboards,workbooks,Rate Exception Dashboard_Home Page,2491211,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+6,prod_workspace,bi_tableau,equipment_details_disp_temp,Dev,workbooks,Projected Disposals,2512344,Ben Stanley,ben.stanley@sunstateequip.com
+7,prod_workspace,bi_tableau,fy24_commissions_net,UES Compensation,workbooks,Manager Oversight UES Dashboard,2408686,Matt Trejo,matt.trejo@sunstateequip.com
+8,prod_workspace,bi_tableau,pickup_and_delivery,P&D Operations,workbooks,P&D Operations Dashborad,2592239,Janet Shen,janet.shen@sunstateequip.com
+11,prod_workspace,bi_tableau,warranty_claims_v2,Dev,workbooks,Warranty Reporting,2798106,Curtis Baxter,curtis.baxter@sunstateequip.com
+12,prod_workspace,bi_tableau,equipment_details,Fleet,workbooks,Equipment Summary & Details ,2474435,Curtis Baxter,curtis.baxter@sunstateequip.com
+13,prod_workspace,bi_tableau,branch_pulse_metrics_2,Operations,workbooks,Branch Pulse,2661130,Matt Trejo,matt.trejo@sunstateequip.com
+13,prod_workspace,bi_tableau,branch_pulse_metrics_1,Operations,workbooks,Branch Pulse,2661130,Matt Trejo,matt.trejo@sunstateequip.com
+13,prod_workspace,bi_tableau,branch_pulse_metrics_3,Operations,workbooks,Branch Pulse,2661130,Matt Trejo,matt.trejo@sunstateequip.com
+14,prod_workspace,analytics,revenue,Southeast,workbooks,Test Revenue Trench,2510239,Daniel Hataway,daniel.hataway@sunstateequip.com
+15,prod_workspace,bi_tableau,equipment_details,Trench,workbooks,Equipment ROI and Utilization by Market,2572614,Kris Masterson,kris.masterson@sunstateequip.com
+16,prod_workspace,bi_tableau,qbr_data_inputs,Dev,workbooks,QBR Tableau Data,2342970,Grant Wallace,grant.wallace@sunstateequip.com
+17,prod_workspace,bi_tableau,trackvia_edit_history,People Services,workbooks,UES Trackvia Edit Audit Dashboard,2428065,Grant Wallace,grant.wallace@sunstateequip.com
+18,prod_workspace,bi_tableau,ar_by_customer,Sales,workbooks,AR By Customer,2456121,Erika Yui,erika.yui@sunstateequip.com
+19,prod_workspace,bi_tableau,exception_rate_header,Pricing,workbooks,Exception Rate Follow-Up ,2385791,Erika Yui,erika.yui@sunstateequip.com
+20,prod_workspace,bi_tableau,equipment_details,Fleet,workbooks,Equipment ROI and Utilization,2474554,Matt Chatel,matt.chatel@sunstateequip.com
+21,prod_reporting,rpt,equipment_open_substitutions,Operations,workbooks,Open Substitutions,2361933,Matt Chatel,matt.chatel@sunstateequip.com
+21,prod_reporting,core,equipment_master,Operations,workbooks,Open Substitutions,2361933,Matt Chatel,matt.chatel@sunstateequip.com
+22,prod_reporting,core,closed_contract_header,One - Offs,workbooks,Warranty Reporting,2248941,Matt Trejo,matt.trejo@sunstateequip.com
+22,prod_reporting,core,equipment_master,One - Offs,workbooks,Warranty Reporting,2248941,Matt Trejo,matt.trejo@sunstateequip.com
+22,prod_reporting,bi,dim_equipment_hierarchy,One - Offs,workbooks,Warranty Reporting,2248941,Matt Trejo,matt.trejo@sunstateequip.com
+22,prod_reporting,core,vendors,One - Offs,workbooks,Warranty Reporting,2248941,Matt Trejo,matt.trejo@sunstateequip.com
+22,prod_reporting,core,warranty_claim_header,One - Offs,workbooks,Warranty Reporting,2248941,Matt Trejo,matt.trejo@sunstateequip.com
+22,prod_reporting,core,work_order_header,One - Offs,workbooks,Warranty Reporting,2248941,Matt Trejo,matt.trejo@sunstateequip.com
+23,prod_reporting,bi,utilization_lookback,Dev,workbooks,Utilization Dashboard_20240911,2800401,Curtis Baxter,curtis.baxter@sunstateequip.com
+24,prod_workspace,bi_tableau,equipment_details,Dev,workbooks,Projected Disposals With Edits,2545809,Grant Wallace,grant.wallace@sunstateequip.com
+25,prod_reporting,rpt,active_account_with_revenue,Sales,workbooks,Active Accounts,2452757,Erika Yui,erika.yui@sunstateequip.com
+26,prod_workspace,bi_tableau,commissions_troubleshoot,UES Compensation,workbooks,Commission Troubleshooting Dashboard,2410194,Matt Trejo,matt.trejo@sunstateequip.com
+27,prod_reporting,rpt,dynamics_activity_history,Salesforce Dashboards,workbooks,Dynamics CRM Activity History,2489064,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+28,prod_workspace,bi_tableau,capex_fleet_mix_v4_left_dimjoins,Fleet,workbooks,CapEx and Disposal,2204336,Curtis Baxter,curtis.baxter@sunstateequip.com
+29,prod_reporting,rpt,marketing_campaign,Sales,workbooks,Marketing Campaign Summary ,2358758,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+30,prod_reporting,rpt,rate_exceptions_salesforce,Custom SQL Extract Conversion,workbooks,Rate Exception Dashboard,2728620,Grant Wallace,grant.wallace@sunstateequip.com
+32,prod_reporting,rpt,dispatch_main,One - Offs,workbooks,Driver Dispatch Mobile,2191589,Janet Shen,janet.shen@sunstateequip.com
+33,prod_reporting,rpt,customer_history_by_month,Sales,workbooks,New and Reactivated Customers,2070956,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+34,prod_workspace,bi_tableau,rental_rate_performance_join_equip,Pricing,workbooks,Rental Rate Performance,2178714,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+34,prod_workspace,bi_tableau,rental_rate_performance_rouse_market,Pricing,workbooks,Rental Rate Performance,2178714,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+34,prod_workspace,bi_tableau,revenue_vs_rouse_benchmark,Pricing,workbooks,Rental Rate Performance,2178714,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+35,prod_workspace,analytics,dodge_put_in_place,Southeast,workbooks,Dodge Put In Place by State by Zip,2680734,Matt Chatel,matt.chatel@sunstateequip.com
+36,prod_workspace,bi_tableau,baag_master_workorder_v3,Operations,workbooks,Fleet at a Glance,2297707,Curtis Baxter,curtis.baxter@sunstateequip.com
+37,prod_workspace,analytics,reservation_lead_time,Dev,workbooks,Reservation Lead Time,2463761,Grant Wallace,grant.wallace@sunstateequip.com
+38,prod_workspace,analytics,revenue,Trench,workbooks,Test Revenue,2510245,Kris Masterson,kris.masterson@sunstateequip.com
+39,js_reporting,rpt,driver_dispatch_yard,One - Offs,workbooks,Driver Dispatch,2173450,Janet Shen,janet.shen@sunstateequip.com
+39,prod_reporting,rpt,dispatch_main,One - Offs,workbooks,Driver Dispatch,2173450,Janet Shen,janet.shen@sunstateequip.com
+40,prod_workspace,bi_tableau,customer_equipment_revenue,One - Offs,workbooks,Call Off Conversion Pilot,2480264,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+40,prod_workspace,bi_tableau,open_contract_customers_jobs,One - Offs,workbooks,Call Off Conversion Pilot,2480264,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+40,prod_workspace,bi_tableau,bill_estimates_by_day,One - Offs,workbooks,Call Off Conversion Pilot,2480264,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+41,prod_reporting,qa,qa_osr_name_misspelt,Governance,workbooks,QA List,2069449,Matt Trejo,matt.trejo@sunstateequip.com
+42,prod_workspace,bi_tableau,remarketing_future_sales,Fleet,workbooks,Remarketing Dashboard,2286907,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+42,prod_workspace,bi_tableau,remarketing_extract,Fleet,workbooks,Remarketing Dashboard,2286907,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+43,prod_reporting,bi,utilization_lookback,Fleet,workbooks,Utilization Dashboard,2062542,Matt Trejo,matt.trejo@sunstateequip.com
+44,prod_workspace,bi_tableau,capex_fleet_mix_v4_left_dimjoins,Southwest,workbooks,CapEx and Disposal with Remaining Disp,2496179,Darrin Olsen,darrin.olsen@sunstateequip.com
+45,prod_reporting,rpt,marketing_campaign,Custom SQL Extract Conversion,workbooks,Marketing Campaign Summary ,2726277,Grant Wallace,grant.wallace@sunstateequip.com
+46,prod_workspace,bi_tableau,op_oq_current_day,Parts / OP OQ,workbooks,OP OQ Dashboard,2592303,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+47,prod_reporting,rpt,open_and_closed_contracts_salesforce,Custom SQL Extract Conversion,workbooks,Open and Closed Contracts,2748198,Grant Wallace,grant.wallace@sunstateequip.com
+48,prod_workspace,bi_tableau,oec_on_rent_map_v2,Sales,workbooks,OEC on Rent Map Dashboard,2066885,Janet Shen,janet.shen@sunstateequip.com
+49,prod_reporting,rpt,open_contract_salesforce_users,Salesforce Dashboards,workbooks,Open Contract Report_Home Page,2509768,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+51,prod_workspace,bi_tableau,remarketing_future_sales,Existing Report Edits,workbooks,Remarketing Dashboard ET,2611372,Ethan Tew,ethan.tew@sunstateequip.com
+51,prod_workspace,bi_tableau,remarketing_extract,Existing Report Edits,workbooks,Remarketing Dashboard ET,2611372,Ethan Tew,ethan.tew@sunstateequip.com
+52,prod_workspace,bi_tableau,fy24_commissions_net,Custom SQL Extract Conversion,workbooks,Manager Oversight UES Dashboard,2726293,Grant Wallace,grant.wallace@sunstateequip.com
+53,prod_workspace,bi_tableau,equipment_details,Dev,workbooks,Projected Dispoals_20240911,2800336,Curtis Baxter,curtis.baxter@sunstateequip.com
+54,prod_reporting,rpt,equipment_transfer_receivable,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+54,prod_reporting,bi,utilization_lookback,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+54,prod_reporting,rpt,equipment_transfer_receivable_details,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+54,prod_workspace,bi_tableau,equipment_demand_rul,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+54,prod_workspace,analytics,equipment_transfer_rec_view,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+54,prod_workspace,bi_tableau,fleet_opt_market_split,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+54,prod_reporting,rpt,equipment_transfer_receivable_header,Fleet,workbooks,Fleet Optimization,2384979,Erika Yui,erika.yui@sunstateequip.com
+55,prod_workspace,bi_tableau,bucket_report_v6,Pricing,workbooks,Pricing Distribution and Trends,2235342,Erika Yui,erika.yui@sunstateequip.com
+56,prod_workspace,analytics,upcoming_exception_rate_suggestions,Custom SQL Extract Conversion,workbooks,Upcoming Exception Rate Proposals,2726275,Grant Wallace,grant.wallace@sunstateequip.com
+57,prod_workspace,bi_tableau,revenue_dashboard_nambdm_allaccts,Sales,workbooks,Revenue Dashboard,2166978,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+57,prod_workspace,bi_tableau,revenue_dashboard_report_test_2,Sales,workbooks,Revenue Dashboard,2166978,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+59,prod_workspace,bi_tableau,op_oq_current_day,Custom SQL Extract Conversion,workbooks,OP OQ Dashboard,2729908,Grant Wallace,grant.wallace@sunstateequip.com
+59,prod_reporting,parts,interchangeable,Custom SQL Extract Conversion,workbooks,OP OQ Dashboard,2729908,Grant Wallace,grant.wallace@sunstateequip.com
+59,prod_reporting,core,item_master,Custom SQL Extract Conversion,workbooks,OP OQ Dashboard,2729908,Grant Wallace,grant.wallace@sunstateequip.com
+60,prod_workspace,analytics,revenue,Trench,workbooks,Trench Revenue for Targeted Accounts,2526938,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+61,prod_workspace,bi_tableau,fy24_commissions_net,Custom SQL Extract Conversion,workbooks,Payroll UES Extract,2726297,Grant Wallace,grant.wallace@sunstateequip.com
+62,prod_reporting,bi,dim_customer,Salesforce Dashboards,workbooks,AIS Forms,2667391,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+62,prod_reporting,bi,dim_outside_sales_managers,Salesforce Dashboards,workbooks,AIS Forms,2667391,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+62,prod_reporting,core,account_information_ais,Salesforce Dashboards,workbooks,AIS Forms,2667391,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+63,prod_workspace,bi_tableau,lost_rentals_join_ntl_acct_ver2,Operations,workbooks,Lost Rentals,2122943,Curtis Baxter,curtis.baxter@sunstateequip.com
+64,prod_workspace,bi_tableau,open_contract_reports_ver3,Sales,workbooks,Open Contract Dashboard,2776718,Erika Yui,erika.yui@sunstateequip.com
+65,prod_reporting,rpt,projected_disposals,Existing Report Edits,workbooks,Projected Disposals With Delivery,2652818,Grant Wallace,grant.wallace@sunstateequip.com
+66,prod_workspace,bi_tableau,equipment_details,Fleet,workbooks,Fleet At Risk,2476889,Matt Chatel,matt.chatel@sunstateequip.com
+67,prod_workspace,bi_tableau,spot_rate_floors,Pricing,workbooks,Spot Rate Floors,2661118,Grant Wallace,grant.wallace@sunstateequip.com
+68,prod_workspace,bi_tableau,trackvia_edit_history,Custom SQL Extract Conversion,workbooks,UES Trackvia Edit Audit Dashboard,2726259,Grant Wallace,grant.wallace@sunstateequip.com
+69,prod_workspace,bi_tableau,pickup_and_delivery,Operations,workbooks,P&D Operations Dashboard,2363874,Erika Yui,erika.yui@sunstateequip.com
+70,prod_reporting,rpt,bulk_utilization,Trench,workbooks,Trench Utilization Dashboard (UAT),2814661,Erika Yui,erika.yui@sunstateequip.com
+70,prod_reporting,bi,dim_date,Trench,workbooks,Trench Utilization Dashboard (UAT),2814661,Erika Yui,erika.yui@sunstateequip.com
+71,prod_workspace,bi_tableau,past_due_contracts,Dev,workbooks,Rental Returns,2810332,Curtis Baxter,curtis.baxter@sunstateequip.com
+72,prod_reporting,bi,dim_customer_credit_status,Governance,workbooks,CRM MDM QA List,2247530,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+72,prod_reporting,core,customer_master,Governance,workbooks,CRM MDM QA List,2247530,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+72,prod_reporting,qa,qa_customer_exceptions,Governance,workbooks,CRM MDM QA List,2247530,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+73,prod_reporting,bi,utilization_lookback,Southwest,workbooks,Ute history with date range,2500551,Darrin Olsen,darrin.olsen@sunstateequip.com
+74,prod_workspace,bi_tableau,pricing_level_change,Pricing,workbooks,Pricing Level Change,2102479,Matt Trejo,matt.trejo@sunstateequip.com
+75,prod_workspace,bi_tableau,future_reservations,Operations,workbooks,Rental Returns,2251424,Curtis Baxter,curtis.baxter@sunstateequip.com
+75,prod_workspace,bi_tableau,past_due_contracts_v2,Operations,workbooks,Rental Returns,2251424,Curtis Baxter,curtis.baxter@sunstateequip.com
+77,prod_workspace,analytics,dodge_put_in_place,Southwest,workbooks,Dodge Put In Place by State by Zip,2680627,Darrin Olsen,darrin.olsen@sunstateequip.com
+78,prod_workspace,bi_tableau,fy24_commissions_net,UES Compensation,workbooks,Payroll UES Extract,2408713,Matt Trejo,matt.trejo@sunstateequip.com
+79,prod_workspace,bi_tableau,capex_fleet_mix_v4_left_dimjoins,Fleet,workbooks,Receipt-Based CapEx and Disposal,2262465,Matt Trejo,matt.trejo@sunstateequip.com
+80,prod_reporting,bi,dim_outside_sales_managers,Dev,workbooks,Open Contract Report _ Home Page,2481685,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+80,prod_reporting,core,ad_employees,Dev,workbooks,Open Contract Report _ Home Page,2481685,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+80,prod_workspace,bi_tableau,equipment_on_rent,Dev,workbooks,Open Contract Report _ Home Page,2481685,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+81,prod_reporting,rpt,dispatch_main,One - Offs,workbooks,Plan for Every Asset,2270874,Ethan Tew,ethan.tew@sunstateequip.com
+82,prod_workspace,bi_tableau,income_statement_branch_with_transactions,Custom SQL Extract Conversion,workbooks,Income Statement,2708129,Grant Wallace,grant.wallace@sunstateequip.com
+83,prod_reporting,bi,dim_super_region,Sales,workbooks,Credit Application Reporting,2104883,Matt Trejo,matt.trejo@sunstateequip.com
+83,prod_reporting,bi,dim_region,Sales,workbooks,Credit Application Reporting,2104883,Matt Trejo,matt.trejo@sunstateequip.com
+83,prod_reporting,bi,fact_credit_applications,Sales,workbooks,Credit Application Reporting,2104883,Matt Trejo,matt.trejo@sunstateequip.com
+83,prod_reporting,core,dim_date,Sales,workbooks,Credit Application Reporting,2104883,Matt Trejo,matt.trejo@sunstateequip.com
+84,prod_reporting,bi,dim_date,Fleet,workbooks,Vendor Purchase Record (Receipt Basis),2697062,Erika Yui,erika.yui@sunstateequip.com
+84,analytics,dbo,rouse_equipment_make_model,Fleet,workbooks,Vendor Purchase Record (Receipt Basis),2697062,Erika Yui,erika.yui@sunstateequip.com
+84,bidw_wynne,dbo,as400_dim_eqpmasfl,Fleet,workbooks,Vendor Purchase Record (Receipt Basis),2697062,Erika Yui,erika.yui@sunstateequip.com
+84,pricing,dbo,vwequipmentdescriptions,Fleet,workbooks,Vendor Purchase Record (Receipt Basis),2697062,Erika Yui,erika.yui@sunstateequip.com
+84,bidw_wynne,dbo,dim_date,Fleet,workbooks,Vendor Purchase Record (Receipt Basis),2697062,Erika Yui,erika.yui@sunstateequip.com
+85,prod_reporting,bi,dim_outside_sales_managers,Salesforce Dashboards,workbooks,All Accounts Dashboard,2668386,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+85,prod_reporting,core,customer_master,Salesforce Dashboards,workbooks,All Accounts Dashboard,2668386,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+86,prod_reporting,bi,dim_outside_sales_managers,Dev,workbooks,Open Contract Report _ Home Page 2,2485122,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+86,prod_reporting,core,ad_employees,Dev,workbooks,Open Contract Report _ Home Page 2,2485122,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+86,prod_workspace,bi_tableau,equipment_on_rent,Dev,workbooks,Open Contract Report _ Home Page 2,2485122,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+87,prod_reporting,rpt,rate_exceptions_salesforce,Custom SQL Extract Conversion,workbooks,Rate Exception Dashboard_Home Page,2748203,Grant Wallace,grant.wallace@sunstateequip.com
+88,prod_workspace,bi_tableau,equipment_details,Dev,workbooks,Projected Disposals_20240911_v2,2800921,Curtis Baxter,curtis.baxter@sunstateequip.com
+89,prod_workspace,bi_tableau,fy24_commissions_net,UES Compensation,workbooks,UES Dashboard,2408700,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+91,prod_workspace,bi_tableau,equipment_details,Fleet,workbooks,Projected Disposals,2478902,Grant Wallace,grant.wallace@sunstateequip.com
+92,prod_workspace,bi_tableau,all_po_10_11_23,Fleet,workbooks,PO Dashboard,2132416,Matt Trejo,matt.trejo@sunstateequip.com
+93,prod_workspace,bi_tableau,bp_vs_fleet_data_v2,Custom SQL Extract Conversion,workbooks,Fleet vs BP,2748195,Grant Wallace,grant.wallace@sunstateequip.com
+94,prod_workspace,analytics,revenue,Southwest,workbooks,Rev by Rgn by Mkt by Month,2730622,Darrin Olsen,darrin.olsen@sunstateequip.com
+95,prod_workspace,bi_tableau,credits_approved,Operations,workbooks,Approved Credits,2407237,Jon White,jon.scheaffer@sunstateequip.com
+96,prod_reporting,rpt,open_and_closed_contracts_salesforce,Salesforce Dashboards,workbooks,Open and Closed Contracts,2497760,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+97,prod_reporting,rpt,rate_exceptions_salesforce,Salesforce Dashboards,workbooks,Rate Exception Dashboard,2470848,Victoria Ivanitskaya,victoria.ivanitskaya@sunstateequip.com
+98,prod_workspace,analytics,rate_exception_proposal_tracking,Pricing,workbooks,Rate Proposal Process Results,2798486,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+99,prod_reporting,rpt,active_account_with_revenue,Dev,workbooks,Active Accounts,2803099,Erika Yui,erika.yui@sunstateequip.com
+100,prod_workspace,bi_tableau,customer_equipment_revenue,Custom SQL Extract Conversion,workbooks,Call Off Conversion Pilot,2748193,Grant Wallace,grant.wallace@sunstateequip.com
+100,prod_workspace,bi_tableau,open_contract_customers_jobs,Custom SQL Extract Conversion,workbooks,Call Off Conversion Pilot,2748193,Grant Wallace,grant.wallace@sunstateequip.com
+100,prod_workspace,bi_tableau,bill_estimates_by_day,Custom SQL Extract Conversion,workbooks,Call Off Conversion Pilot,2748193,Grant Wallace,grant.wallace@sunstateequip.com
+101,prod_reporting,core,system_security,One - Offs,workbooks,Territory Alignment,2347527,Ethan Tew,ethan.tew@sunstateequip.com
+101,prod_reporting,bi,dim_employee,One - Offs,workbooks,Territory Alignment,2347527,Ethan Tew,ethan.tew@sunstateequip.com
+101,prod_reporting,core,outside_sales,One - Offs,workbooks,Territory Alignment,2347527,Ethan Tew,ethan.tew@sunstateequip.com
+102,prod_workspace,bi_tableau,territory_alighment_primary,Territory Alignment,workbooks,Territory Alignment Dashboard,2473447,Erika Yui,erika.yui@sunstateequip.com
+103,prod_workspace,bi_tableau,capex_receipt_limit,Governance,workbooks,CapEx Limits,2381180,Curtis Baxter,curtis.baxter@sunstateequip.com
+104,prod_workspace,bi_tableau,equipment_details,Dev,workbooks,Projected Disposals V2,2535000,Ben Stanley,ben.stanley@sunstateequip.com
+106,prod_reporting,rpt,marketing_campaign,Custom SQL Extract Conversion,workbooks,Marketing Campaign Summary,2748197,Grant Wallace,grant.wallace@sunstateequip.com
+107,prod_workspace,bi_tableau,future_reservations,Dev,workbooks,Rental Returns + Reservations 2,2832018,Curtis Baxter,curtis.baxter@sunstateequip.com
+107,prod_workspace,bi_tableau,past_due_contracts_v2,Dev,workbooks,Rental Returns + Reservations 2,2832018,Curtis Baxter,curtis.baxter@sunstateequip.com
+108,prod_workspace,bi_tableau,fy24_commissions_net,Custom SQL Extract Conversion,workbooks,UES Dashboard,2748206,Grant Wallace,grant.wallace@sunstateequip.com
+109,prod_workspace,bi_tableau,oec_on_rent_map_v2,Dev,workbooks,OEC on Rent Dashboard,2611160,Curtis Baxter,curtis.baxter@sunstateequip.com
+110,prod_workspace,bi_tableau,pdrate,Pricing,workbooks,P&D Rates,2595203,Matt Chatel,matt.chatel@sunstateequip.com
+110,prod_workspace,bi_tableau,transport_charge,Pricing,workbooks,P&D Rates,2595203,Matt Chatel,matt.chatel@sunstateequip.com
+111,prod_reporting,core,searchrebel_rate_exception,Dev,workbooks,Rate Proposal Process Results,2798417,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+111,prod_reporting,bi,dim_customer,Dev,workbooks,Rate Proposal Process Results,2798417,Kyle McAninch,kyle.mcaninch@sunstateequip.com
+112,prod_reporting,core,searchrebel_rate_exception,Dev,workbooks,Rate Exception App Tracking- Dev,2730546,Charlotte Johnson,charlotte.johnson@sunstateequip.com
+112,prod_reporting,bi,dim_customer,Dev,workbooks,Rate Exception App Tracking- Dev,2730546,Charlotte Johnson,charlotte.johnson@sunstateequip.com
+114,prod_workspace,bi_tableau,income_statement_branch_with_transactions,Finance,workbooks,Market to Business Plan Comparison,2420029,Matt Trejo,matt.trejo@sunstateequip.com
+115,prod_workspace,bi_tableau,oec_on_rent_map_v2,Dev,workbooks,OLD OEC on Rent Map Dashboard,2593048,Curtis Baxter,curtis.baxter@sunstateequip.com
+117,prod_reporting,analytics_certified,revenue,Sales,workbooks,Gainers and Losers,2814909,Matt Trejo,matt.trejo@sunstateequip.com
+119,prod_workspace,pricing,customer_segmentation_rates,Dev,workbooks,Customer Segmentation Rates,2489728,Jon White,jon.scheaffer@sunstateequip.com
+120,prod_workspace,bi_tableau,pdrate_ver7_test,Pricing,workbooks,P&D Rates by Managers,2296858,Erika Yui,erika.yui@sunstateequip.com
+121,prod_workspace,analytics,taft_electric_fleet_on_rent_report,One - Offs,workbooks,Taft Electric Units on Rent,2769790,Matt Chatel,matt.chatel@sunstateequip.com
+122,prod_reporting,rpt,customer_funnel,Sales,workbooks,Customer Funnel Dashboard,2575216,Janet Shen,janet.shen@sunstateequip.com
+123,ka_reporting,rpt,pricing_buckets,Dev,workbooks,Pricing Distribution and Trends,2784472,Erika Yui,erika.yui@sunstateequip.com
+124,prod_workspace,bi_tableau,open_contract_reports_ver3,Custom SQL Extract Conversion,workbooks,Open Contract Dashboard,2726290,Grant Wallace,grant.wallace@sunstateequip.com
+125,prod_reporting,rpt,customer_history_by_month,Custom SQL Extract Conversion,workbooks,New and Reactivated Customers,2726283,Grant Wallace,grant.wallace@sunstateequip.com
+126,prod_workspace,bi_tableau,future_reservations,Dev,workbooks,Rental Returns + Reservations,2824664,Curtis Baxter,curtis.baxter@sunstateequip.com
+126,prod_workspace,bi_tableau,past_due_contracts_v2,Dev,workbooks,Rental Returns + Reservations,2824664,Curtis Baxter,curtis.baxter@sunstateequip.com
+127,prod_workspace,bi_tableau,remarketing_extract,Custom SQL Extract Conversion,workbooks,Remarketing Dashboard,2748204,Grant Wallace,grant.wallace@sunstateequip.com
+127,prod_workspace,bi_tableau,remarketing_future_sales,Custom SQL Extract Conversion,workbooks,Remarketing Dashboard,2748204,Grant Wallace,grant.wallace@sunstateequip.com
+129,prod_workspace,bi_tableau,op_oq_current_day,Operations,workbooks,OP OQ Dashboard,2473436,Matt Trejo,matt.trejo@sunstateequip.com
+130,prod_reporting,rpt,dynamics_activity_history,Custom SQL Extract Conversion,workbooks,Dynamics CRM Activity History,2728527,Grant Wallace,grant.wallace@sunstateequip.com
+131,prod_workspace,bi_tableau,income_statement_branch_with_transactions,Finance,workbooks,Income Statement,2204556,Kyle McAninch,kyle.mcaninch@sunstateequip.com

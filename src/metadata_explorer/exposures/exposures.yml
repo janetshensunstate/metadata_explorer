@@ -1,0 +1,2290 @@
+version: 1
+exposures:
+- name: pricing_distribution_and_trends
+  label: Pricing Distribution and Trends
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/63080910
+  type: published_datasource
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_pricing_buckets')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_rental_equipment')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_customer_master')
+- name: rate_exceptions_salesforce
+  label: Rate Exceptions Salesforce
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61766209
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_rate_exception_header')
+  - ref('core_equipment_discount_rates')
+  - ref('core_ad_employees')
+  - ref('core_rate_exception_detail')
+- name: warranty_claims
+  label: Warranty Claims
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61053196
+  type: published_datasource
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_equipment_hierarchy')
+  - source('hvr_oos_wowrclfl')
+  - source('sunstate_hvr_standard_eqpmasfl')
+- name: oec_on_rent_map
+  label: OEC on Rent Map
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/57762259
+  type: published_datasource
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_analysis_group')
+  - ref('bi_dim_region')
+  - ref('bi_fact_fleet_on_rent_open_contract')
+  - ref('bi_dim_market')
+  - ref('bi_dim_super_region')
+  - ref('bi_dim_branch')
+  - ref('bi_dim_district')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_equipment_catclass')
+  - ref('bi_dim_equipment_bp_group')
+  - ref('bi_dim_job_site')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+- name: lost_rentals
+  label: Lost Rentals
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/54698615
+  type: published_datasource
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_lost_rentals')
+  - ref('bi_dim_customer')
+- name: market_pairings_extract
+  label: Market Pairings Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/66081832
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rpt_equipment_demand')
+- name: projected_disposals
+  label: Projected Disposals
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/64026665
+  type: published_datasource
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_reason_code_lookup')
+  - ref('core_system_equipment_status_code')
+- name: truck_data
+  label: Truck Data
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/60771416
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - other('analytics_equipment_transfer_rec')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_market')
+  - ref('bi_utilization_lookback')
+  - ref('core_markets')
+  - ref('core_branches')
+- name: dodge_put_in_place_dollars
+  label: Dodge Put In Place Dollars
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/64988717
+  type: published_datasource
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - other('macfd_macfd_sunstate_custom_forecast')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_outside_sales')
+  - ref('core_territory_mapping')
+  - ref('core_system_security')
+  - ref('core_us_zipcodes')
+  - ref('core_ad_employees')
+- name: truck_data_rpt
+  label: Truck Data RPT
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61627299
+  type: published_datasource
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_equipment_optimization')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('rpt_equipment_transfer_receivable')
+  - ref('rpt_equipment_transfer_receivable')
+- name: ais_extract
+  label: AIS Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/64487838
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_outside_sales_managers')
+  - source('sunstate_hvr_standard_aishisfl')
+- name: p_and_d_rate_by_manager
+  label: P&D Rate By Manager
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/60123154
+  type: published_datasource
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_transportation_detail')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+- name: equipment_demand_w_rul
+  label: Equipment Demand w RUL
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/62284880
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_lost_rentals')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_equipment_catclass')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_closed_contract_header')
+  - ref('core_equipment_substitutions')
+  - ref('core_closed_contract_detail')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+- name: dispatch_data_yard
+  label: Dispatch Data Yard
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/59705505
+  type: published_datasource
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - source('dynamic_dispatch_dbo_lookup')
+  - other('rpt_driver_dispatch_truck')
+  - other('rpt_driver_dispatch_main')
+  - other('rpt_driver_dispatch_driver')
+- name: income_statement
+  label: Income Statement
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/58603038
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_fy23_ssms_avg_r_and_d_fleet')
+  - ref('capex_sharepoint')
+  - ref('bi_dim_date')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_lawson_accounts')
+  - ref('bi_dim_lawson_accounting_units')
+  - ref('bi_fact_equipment_utilization_delta')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_general_ledger_chart_detail')
+  - ref('core_general_ledger_amounts')
+  - ref('core_general_ledger_budget_detail')
+- name: equipment_rentals
+  label: Equipment Rentals
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/58411841
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: pricing_level_change
+  label: Pricing Level Change
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/54290313
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_monthly_pricing_level_changes')
+- name: rental_returns__plus__reservations
+  label: Rental Returns + Reservations
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/66884583
+  type: published_datasource
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('core_open_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_open_contract_detail')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_employee')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+- name: all_rentalman_customers
+  label: All RentalMan Customers
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/64479008
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_outside_sales_managers')
+  - source('sunstate_hvr_standard_cusmasfl')
+- name: remarketing_extract
+  label: Remarketing Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/64602617
+  type: published_datasource
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: open_contracts_with_all_reps
+  label: open contracts with all reps
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/62291526
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_territory_mapping')
+  - ref('core_open_contract_detail')
+  - ref('core_job_site')
+  - ref('core_catclass_master')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+- name: p_and_d_book_rate__parenlft_look_back_parenrght_
+  label: P&D Book Rate (Look Back)
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/56594862
+  type: published_datasource
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_transport_charges')
+  - ref('bi_dim_market')
+- name: remarketing_extract_2
+  label: Remarketing Extract 2
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/57148544
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: revenue_detail_union
+  label: Revenue Detail Union
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/55288712
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_revenue_dashboard_report_test_2')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('rpt_pricing_buckets')
+  - ref('bi_dim_outside_sales_type')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_sic_codes')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_dim_equipment_hierarchy')
+- name: income_statement_vertical_with_transactions
+  label: Income Statement Vertical with Transactions
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/65080224
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_income_statement_branch')
+  - ref('bi_dim_date')
+  - ref('bi_dim_lawson_accounts')
+  - ref('bi_dim_lawson_accounting_units')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_general_ledger_journals')
+  - ref('core_general_ledger_chart_detail')
+  - ref('core_general_ledger_transactions_enriched')
+  - ref('core_general_ledger_history')
+- name: open_and_closed_contracts_salesforce
+  label: Open and Closed Contracts Salesforce
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61629554
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_closed_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail')
+  - ref('core_job_site')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+  - ref('core_closed_contract_detail_nrt')
+- name: future_remarketing_sales
+  label: Future Remarketing Sales
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/55230713
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('analytics_disposal_useful_life')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_dim_sales_types_descriptions')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_auction_master')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: bp_vs_fleet_unpivoted
+  label: BP vs Fleet unpivoted
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/59138300
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_bp_vs_fleet_fy_23')
+  - ref('analytics_certified_fleet_utilization_history')
+  - ref('capex_sharepoint')
+  - ref('bi_dim_date')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch_hierarchy')
+- name: dispatch_data
+  label: Dispatch Data
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/64203276
+  type: published_datasource
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - ref('core_dispatch_equipment')
+  - ref('core_dispatch_lookup')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_truck_dispatch')
+  - ref('core_ad_employees')
+  - ref('core_catclass_master')
+  - ref('core_equipment_master_nrt')
+  - ref('core_dispatch')
+- name: revenue
+  label: Revenue
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61766825
+  type: published_datasource
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_customer')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_job_site')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_equipment_master')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_cash_customer_master')
+- name: branch_pulse_extract
+  label: Branch Pulse Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/63549437
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_catclass')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_purchase_order_header')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_credit_approval')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_order_comment')
+  - ref('core_vendors')
+  - other('bi_tableau_all_po_with_parts_06_24_24')
+  - ref('rpt_lost_rentals')
+  - ref('rpt_transportation_detail')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_open_contract_header')
+  - ref('core_reason_code')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_rate_override_comment')
+  - ref('core_rental_quotes_pricing')
+  - ref('core_ad_employees')
+  - ref('bi_dim_date')
+  - ref('bi_fact_equipment_history_daily')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_job_site')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_open_contract_header')
+  - ref('core_dim_date')
+  - ref('core_dispatch_equipment')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_work_order_header')
+  - ref('core_dispatch')
+- name: fy24_commission_net_extract
+  label: FY24 Commission Net Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/62920994
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: p_and_d_rates
+  label: P&D Rates
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/56594663
+  type: published_datasource
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_transportation_detail')
+  - ref('bi_dim_date')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+- name: ues_extract
+  label: UES Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/54973663
+  type: published_datasource
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: vendor_spending
+  label: Vendor Spending
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61036818
+  type: published_datasource
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_purchase_order_header')
+  - ref('core_item_master')
+  - ref('core_purchase_order_detail')
+  - ref('core_vendors')
+- name: commissions_troubleshoot
+  label: Commissions Troubleshoot
+  url: https://10az.online.tableau.com/#/site/sunstate/datasources/61053804
+  type: published_datasource
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: upcoming_exception_rate_proposals
+  label: Upcoming Exception Rate Proposals
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2592539
+  type: workbook
+  owner:
+    name: Charlotte Johnson
+    email: charlotte.johnson@sunstateequip.com
+  depends_on:
+  - ref('pricing_suggested_rate_exception_header')
+  - other('analytics_rate_exception_proposal_date_overrides')
+  - ref('rpt_exception_rates')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_geographical_hierarchy')
+- name: test_trench_rev
+  label: Test Trench Rev
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2510237
+  type: workbook
+  owner:
+    name: Grant Bettinger
+    email: grant.bettinger@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_customer')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_job_site')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_equipment_master')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_cash_customer_master')
+- name: fleet_vs_bp
+  label: Fleet vs BP
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2419758
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_bp_vs_fleet_fy_23')
+  - ref('analytics_certified_fleet_utilization_history')
+  - ref('capex_sharepoint')
+  - ref('bi_dim_date')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch_hierarchy')
+- name: open_contract_report_home_page
+  label: Open Contract Report_Home Page
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748200
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_territory_mapping')
+  - ref('core_open_contract_detail')
+  - ref('core_job_site')
+  - ref('core_catclass_master')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+- name: dodge_map
+  label: Dodge Map
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2244174
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - source('sunstate_hvr_standard_mziptrfl')
+  - source('sunstate_hvr_standard_mslsrpfl')
+- name: rate_exception_dashboard_home_page
+  label: Rate Exception Dashboard_Home Page
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2491211
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_rate_exception_header')
+  - ref('core_equipment_discount_rates')
+  - ref('core_ad_employees')
+  - ref('core_rate_exception_detail')
+- name: projected_disposals
+  label: Projected Disposals
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2512344
+  type: workbook
+  owner:
+    name: Ben Stanley
+    email: ben.stanley@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: manager_oversight_ues_dashboard
+  label: Manager Oversight UES Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2408686
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: p_and_d_operations_dashborad
+  label: P&D Operations Dashborad
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2592239
+  type: workbook
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - ref('rpt_pickup_and_delivery')
+  - ref('bi_dim_market')
+  - ref('core_dim_date')
+- name: warranty_reporting
+  label: Warranty Reporting
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2798106
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('core_work_order_labor_detail')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_warranty_claim_header')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+  - ref('core_work_order_header')
+  - ref('core_vendors')
+- name: equipment_summary__and__details_
+  label: 'Equipment Summary & Details '
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2474435
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: branch_pulse
+  label: Branch Pulse
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2661130
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_catclass')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_purchase_order_header')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_credit_approval')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_order_comment')
+  - ref('core_vendors')
+  - other('bi_tableau_all_po_with_parts_06_24_24')
+  - ref('rpt_lost_rentals')
+  - ref('rpt_transportation_detail')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_open_contract_header')
+  - ref('core_reason_code')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_rate_override_comment')
+  - ref('core_rental_quotes_pricing')
+  - ref('core_ad_employees')
+  - ref('bi_dim_date')
+  - ref('bi_fact_equipment_history_daily')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_job_site')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_open_contract_header')
+  - ref('core_dim_date')
+  - ref('core_dispatch_equipment')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_work_order_header')
+  - ref('core_dispatch')
+- name: test_revenue_trench
+  label: Test Revenue Trench
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2510239
+  type: workbook
+  owner:
+    name: Daniel Hataway
+    email: daniel.hataway@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_customer')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_job_site')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_equipment_master')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_cash_customer_master')
+- name: equipment_roi_and_utilization_by_market
+  label: Equipment ROI and Utilization by Market
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2572614
+  type: workbook
+  owner:
+    name: Kris Masterson
+    email: kris.masterson@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: ues_trackvia_edit_audit_dashboard
+  label: UES Trackvia Edit Audit Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2428065
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_employee_daily')
+  - ref('core_ad_employees')
+  - ref('core_sold_equipment_trackvia_transactions')
+- name: ar_by_customer
+  label: AR By Customer
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2456121
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_customer_aging_by_sales_person')
+  - ref('bi_dim_customer')
+  - ref('core_system_security')
+- name: exception_rate_follow-up_
+  label: 'Exception Rate Follow-Up '
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2385791
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_exception_rates')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+- name: equipment_roi_and_utilization
+  label: Equipment ROI and Utilization
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2474554
+  type: workbook
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: open_substitutions
+  label: Open Substitutions
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2361933
+  type: workbook
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - source('sunstate_hvr_standard_eqpmasfl')
+- name: warranty_reporting
+  label: Warranty Reporting
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2248941
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - source('sunstate_hvr_standard_rachdrfl')
+  - source('sunstate_hvr_standard_eqpmasfl')
+  - ref('rules_rules_dim_equipment_hierarchy')
+  - source('hvr_oos_wowrclfl')
+  - source('sunstate_hvr_standard_woheadfl')
+- name: projected_disposals_with_edits
+  label: Projected Disposals With Edits
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2545809
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: commission_troubleshooting_dashboard
+  label: Commission Troubleshooting Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2410194
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: capex_and_disposal
+  label: CapEx and Disposal
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2204336
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - other('analytics_capex_fleet_mix_fy24_disposals')
+  - ref('rpt_capex_fleet_mix')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_market')
+  - ref('core_markets')
+- name: rate_exception_dashboard
+  label: Rate Exception Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2728620
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_rate_exception_header')
+  - ref('core_equipment_discount_rates')
+  - ref('core_ad_employees')
+  - ref('core_rate_exception_detail')
+- name: driver_dispatch_mobile
+  label: Driver Dispatch Mobile
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2191589
+  type: workbook
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - ref('core_dispatch_equipment')
+  - ref('core_dispatch_lookup')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_truck_dispatch')
+  - ref('core_ad_employees')
+  - ref('core_catclass_master')
+  - ref('core_equipment_master_nrt')
+  - ref('core_dispatch')
+- name: new_and_reactivated_customers
+  label: New and Reactivated Customers
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2070956
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_date')
+  - ref('bi_dim_date')
+  - ref('bi_dim_technical_revenue_type')
+  - ref('bi_fact_sales_revenue_detail')
+  - ref('bi_dim_outside_sales_type')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_sic_codes')
+  - ref('core_closed_contract_header')
+  - ref('core_customer_master')
+- name: rental_rate_performance
+  label: Rental Rate Performance
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2178714
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_rate_performance')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('rpt_rental_rate_performance')
+  - ref('rpt_rouse_revenue')
+  - ref('rpt_rouse_rates')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('rpt_rouse_revenue')
+  - ref('rpt_rouse_rates')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_dim_equipment_hierarchy')
+- name: dodge_put_in_place_by_state_by_zip
+  label: Dodge Put In Place by State by Zip
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2680734
+  type: workbook
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - other('macfd_macfd_sunstate_custom_forecast')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_outside_sales')
+  - ref('core_territory_mapping')
+  - ref('core_system_security')
+  - ref('core_us_zipcodes')
+  - ref('core_ad_employees')
+- name: fleet_at_a_glance
+  label: Fleet at a Glance
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2297707
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('bi_fact_equipment_history_daily')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_truck_dispatch_realtime')
+  - ref('core_work_order_header_nrt')
+  - ref('core_work_order_mechanics')
+  - ref('core_open_contract_header')
+  - ref('core_pending_purchase_orders_nrt')
+  - ref('core_customer_master')
+  - ref('core_sales_details_nrt')
+  - ref('core_purchase_order_detail_nrt')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_equipment_master_transactions_nrt')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_purchase_order_header_nrt')
+  - ref('core_equipment_master_nrt')
+  - ref('core_pickup_tickets_nrt')
+  - ref('core_closed_contract_detail_nrt')
+- name: reservation_lead_time
+  label: Reservation Lead Time
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2463761
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - source('sunstate_hvr_raodetfl')
+  - source('sunstate_hvr_raohdrfl')
+  - ref('bi_dim_date')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch')
+  - ref('core_customer_master')
+  - ref('core_seconds_in_a_day')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_dim_equipment_hierarchy')
+- name: test_revenue
+  label: Test Revenue
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2510245
+  type: workbook
+  owner:
+    name: Kris Masterson
+    email: kris.masterson@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_customer')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_job_site')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_equipment_master')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_cash_customer_master')
+- name: driver_dispatch
+  label: Driver Dispatch
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2173450
+  type: workbook
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - source('dynamic_dispatch_dbo_lookup')
+  - other('rpt_driver_dispatch_truck')
+  - other('rpt_driver_dispatch_main')
+  - other('rpt_driver_dispatch_driver')
+  - ref('core_dispatch_equipment')
+  - ref('core_dispatch_lookup')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_truck_dispatch')
+  - ref('core_ad_employees')
+  - ref('core_catclass_master')
+  - ref('core_equipment_master_nrt')
+  - ref('core_dispatch')
+- name: call_off_conversion_pilot
+  label: Call Off Conversion Pilot
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2480264
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('core_equipment_master')
+  - ref('core_closed_contract_detail_nrt')
+  - ref('customer_segmentation_contract_gaps_equip')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_fact_sales_revenue_detail')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_outside_sales')
+  - ref('core_equipment_master')
+  - ref('core_job_site')
+  - ref('core_open_contract_detail_nrt')
+  - ref('core_equipment_master_nrt')
+  - ref('core_open_contract_header_nrt')
+  - ref('bi_dim_date')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail_nrt')
+  - ref('core_closed_contract_header_nrt')
+  - ref('core_open_contract_header_nrt')
+- name: qa_list
+  label: QA List
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2069449
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('dbt_test__audit_test_osr_name_misspelt')
+- name: remarketing_dashboard
+  label: Remarketing Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2286907
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - other('analytics_disposal_useful_life')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_dim_sales_types_descriptions')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_auction_master')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: capex_and_disposal_with_remaining_disp
+  label: CapEx and Disposal with Remaining Disp
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2496179
+  type: workbook
+  owner:
+    name: Darrin Olsen
+    email: darrin.olsen@sunstateequip.com
+  depends_on:
+  - other('analytics_capex_fleet_mix_fy24_disposals')
+  - ref('rpt_capex_fleet_mix')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_market')
+  - ref('core_markets')
+- name: op_oq_dashboard
+  label: OP OQ Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2592303
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - ref('parts_inventory_report')
+  - ref('bi_dim_branch_hierarchy')
+- name: open_and_closed_contracts
+  label: Open and Closed Contracts
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748198
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_closed_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail')
+  - ref('core_job_site')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+  - ref('core_closed_contract_detail_nrt')
+- name: oec_on_rent_map_dashboard
+  label: OEC on Rent Map Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2066885
+  type: workbook
+  owner:
+    name: Janet Shen
+    email: janet.shen@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_analysis_group')
+  - ref('bi_dim_region')
+  - ref('bi_fact_fleet_on_rent_open_contract')
+  - ref('bi_dim_market')
+  - ref('bi_dim_super_region')
+  - ref('bi_dim_branch')
+  - ref('bi_dim_district')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_equipment_catclass')
+  - ref('bi_dim_equipment_bp_group')
+  - ref('bi_dim_job_site')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+- name: open_contract_report_home_page
+  label: Open Contract Report_Home Page
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2509768
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_territory_mapping')
+  - ref('core_open_contract_detail')
+  - ref('core_job_site')
+  - ref('core_catclass_master')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+- name: remarketing_dashboard_et
+  label: Remarketing Dashboard ET
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2611372
+  type: workbook
+  owner:
+    name: Ethan Tew
+    email: ethan.tew@sunstateequip.com
+  depends_on:
+  - other('analytics_disposal_useful_life')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_dim_sales_types_descriptions')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_auction_master')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+- name: manager_oversight_ues_dashboard
+  label: Manager Oversight UES Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2726293
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: projected_dispoals_20240911
+  label: Projected Dispoals_20240911
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2800336
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: fleet_optimization
+  label: Fleet Optimization
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2384979
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_equipment_optimization')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('rpt_equipment_transfer_receivable')
+  - ref('rpt_lost_rentals')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_utilization_lookback')
+  - ref('bi_dim_equipment_catclass')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_closed_contract_header')
+  - ref('core_equipment_substitutions')
+  - ref('core_closed_contract_detail')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - other('analytics_equipment_transfer_rec')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_market')
+  - ref('bi_utilization_lookback')
+  - ref('core_markets')
+  - ref('core_branches')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_equipment_transfer_receivable')
+- name: pricing_distribution_and_trends
+  label: Pricing Distribution and Trends
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2235342
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_pricing_buckets')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_rental_equipment')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_customer_master')
+- name: upcoming_exception_rate_proposals
+  label: Upcoming Exception Rate Proposals
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2726275
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('pricing_suggested_rate_exception_header')
+  - other('analytics_rate_exception_proposal_date_overrides')
+  - ref('rpt_exception_rates')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_geographical_hierarchy')
+- name: revenue_dashboard
+  label: Revenue Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2166978
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_revenue_dashboard_report_test_2')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('rpt_pricing_buckets')
+  - ref('bi_dim_outside_sales_type')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_sic_codes')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_dim_equipment_hierarchy')
+- name: op_oq_dashboard
+  label: OP OQ Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2729908
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('parts_inventory_report')
+  - ref('bi_dim_branch_hierarchy')
+  - source('sunstate_hvr_standard_itmmasfl')
+- name: trench_revenue_for_targeted_accounts
+  label: Trench Revenue for Targeted Accounts
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2526938
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_customer')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_job_site')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_equipment_master')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_cash_customer_master')
+- name: payroll_ues_extract
+  label: Payroll UES Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2726297
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: ais_forms
+  label: AIS Forms
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2667391
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_outside_sales_managers')
+  - source('sunstate_hvr_standard_aishisfl')
+- name: lost_rentals
+  label: Lost Rentals
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2122943
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_lost_rentals')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_equipment_master')
+- name: open_contract_dashboard
+  label: Open Contract Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2776718
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_equipment_open_substitutions')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_equipment_substitutions')
+  - ref('core_open_contract_header')
+  - ref('core_reason_code')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_rate_override_comment')
+  - ref('core_rental_quotes_pricing')
+  - ref('core_ad_employees')
+  - ref('core_open_contract_header_nrt')
+- name: fleet_at_risk
+  label: Fleet At Risk
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2476889
+  type: workbook
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: ues_trackvia_edit_audit_dashboard
+  label: UES Trackvia Edit Audit Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2726259
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_employee_daily')
+  - ref('core_ad_employees')
+  - ref('core_sold_equipment_trackvia_transactions')
+- name: p_and_d_operations_dashboard
+  label: P&D Operations Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2363874
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_pickup_and_delivery')
+  - ref('bi_dim_market')
+  - ref('core_dim_date')
+- name: rental_returns
+  label: Rental Returns
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2810332
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_employee')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_truck_dispatch_realtime')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+- name: crm_mdm_qa_list
+  label: CRM MDM QA List
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2247530
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_reason_code_lookup')
+  - source('sunstate_hvr_standard_cusmasfl')
+- name: pricing_level_change
+  label: Pricing Level Change
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2102479
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rpt_monthly_pricing_level_changes')
+- name: rental_returns
+  label: Rental Returns
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2251424
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('core_open_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_open_contract_detail')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_employee')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+- name: dodge_put_in_place_by_state_by_zip
+  label: Dodge Put In Place by State by Zip
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2680627
+  type: workbook
+  owner:
+    name: Darrin Olsen
+    email: darrin.olsen@sunstateequip.com
+  depends_on:
+  - other('macfd_macfd_sunstate_custom_forecast')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_outside_sales')
+  - ref('core_territory_mapping')
+  - ref('core_system_security')
+  - ref('core_us_zipcodes')
+  - ref('core_ad_employees')
+- name: payroll_ues_extract
+  label: Payroll UES Extract
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2408713
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: receipt-based_capex_and_disposal
+  label: Receipt-Based CapEx and Disposal
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2262465
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('analytics_capex_fleet_mix_fy24_disposals')
+  - ref('rpt_capex_fleet_mix')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_market')
+  - ref('core_markets')
+- name: open_contract_report___home_page
+  label: Open Contract Report _ Home Page
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2481685
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_outside_sales_managers')
+  - ref('rules_rules_ad_employees')
+- name: plan_for_every_asset
+  label: Plan for Every Asset
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2270874
+  type: workbook
+  owner:
+    name: Ethan Tew
+    email: ethan.tew@sunstateequip.com
+  depends_on:
+  - ref('core_dispatch_equipment')
+  - ref('core_dispatch_lookup')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_truck_dispatch')
+  - ref('core_ad_employees')
+  - ref('core_catclass_master')
+  - ref('core_equipment_master_nrt')
+  - ref('core_dispatch')
+- name: income_statement
+  label: Income Statement
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2708129
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_income_statement_branch')
+  - ref('bi_dim_date')
+  - ref('bi_dim_lawson_accounts')
+  - ref('bi_dim_lawson_accounting_units')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_general_ledger_journals')
+  - ref('core_general_ledger_chart_detail')
+  - ref('core_general_ledger_transactions_enriched')
+  - ref('core_general_ledger_history')
+- name: credit_application_reporting
+  label: Credit Application Reporting
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2104883
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_branch_hierarchy')
+  - ref('rules_rules_dim_branch_hierarchy')
+  - ref('bi_dim_business_type')
+  - ref('core_credit_applications')
+  - ref('core_markets')
+- name: all_accounts_dashboard
+  label: All Accounts Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2668386
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_outside_sales_managers')
+  - ref('rules_rules_dim_outside_sales_managers')
+  - source('sunstate_hvr_standard_cusmasfl')
+  - source('sunstate_hvr_standard_cusmasfl')
+- name: open_contract_report___home_page_2
+  label: Open Contract Report _ Home Page 2
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2485122
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_dim_outside_sales_managers')
+  - ref('rules_rules_ad_employees')
+- name: rate_exception_dashboard_home_page
+  label: Rate Exception Dashboard_Home Page
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748203
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_rate_exception_header')
+  - ref('core_equipment_discount_rates')
+  - ref('core_ad_employees')
+  - ref('core_rate_exception_detail')
+- name: projected_disposals_20240911_v2
+  label: Projected Disposals_20240911_v2
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2800921
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: ues_dashboard
+  label: UES Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2408700
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: projected_disposals
+  label: Projected Disposals
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2478902
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: po_dashboard
+  label: PO Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2132416
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_delivery_branches')
+  - ref('rpt_capex_suggested_market')
+  - ref('bi_dim_date')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_purchase_order_header')
+  - ref('core_item_master')
+  - ref('core_markets')
+  - ref('core_equipment_master')
+  - ref('core_purchase_order_detail_tv')
+  - ref('core_purchase_order_detail')
+  - ref('core_branches')
+  - ref('core_vendors')
+- name: fleet_vs_bp
+  label: Fleet vs BP
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748195
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_bp_vs_fleet_fy_23')
+  - ref('analytics_certified_fleet_utilization_history')
+  - ref('capex_sharepoint')
+  - ref('bi_dim_date')
+  - ref('bi_dim_market')
+  - ref('bi_dim_branch_hierarchy')
+- name: rev_by_rgn_by_mkt_by_month
+  label: Rev by Rgn by Mkt by Month
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2730622
+  type: workbook
+  owner:
+    name: Darrin Olsen
+    email: darrin.olsen@sunstateequip.com
+  depends_on:
+  - other('analytics_dim_customer')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_job_site')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_item_master')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_equipment_master')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_cash_customer_master')
+- name: approved_credits
+  label: Approved Credits
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2407237
+  type: workbook
+  owner:
+    name: Jon White
+    email: jon.scheaffer@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_fact_sales_revenue_detail')
+  - ref('core_closed_contract_header')
+  - ref('core_closed_contract_detail')
+  - ref('core_credit_approval')
+  - ref('core_reason_code')
+  - ref('core_customer_master')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_order_comment')
+- name: open_and_closed_contracts
+  label: Open and Closed Contracts
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2497760
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_item_master')
+  - ref('core_open_contract_header')
+  - ref('core_closed_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail')
+  - ref('core_job_site')
+  - ref('core_dim_equipment_hierarchy')
+  - ref('core_equipment_master_nrt')
+  - ref('core_closed_contract_detail_nrt')
+- name: rate_exception_dashboard
+  label: Rate Exception Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2470848
+  type: workbook
+  owner:
+    name: Victoria Ivanitskaya
+    email: victoria.ivanitskaya@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('core_rate_exception_header')
+  - ref('core_equipment_discount_rates')
+  - ref('core_ad_employees')
+  - ref('core_rate_exception_detail')
+- name: rate_proposal_process_results
+  label: Rate Proposal Process Results
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2798486
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_market')
+  - ref('bi_dim_customer')
+  - ref('core_searchrebel_rate_exception')
+- name: call_off_conversion_pilot
+  label: Call Off Conversion Pilot
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748193
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('core_equipment_master')
+  - ref('core_closed_contract_detail_nrt')
+  - ref('customer_segmentation_contract_gaps_equip')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_fact_sales_revenue_detail')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_outside_sales')
+  - ref('core_equipment_master')
+  - ref('core_job_site')
+  - ref('core_open_contract_detail_nrt')
+  - ref('core_equipment_master_nrt')
+  - ref('core_open_contract_header_nrt')
+  - ref('bi_dim_date')
+  - ref('core_customer_master')
+  - ref('core_open_contract_detail_nrt')
+  - ref('core_closed_contract_header_nrt')
+  - ref('core_open_contract_header_nrt')
+- name: territory_alignment
+  label: Territory Alignment
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2347527
+  type: workbook
+  owner:
+    name: Ethan Tew
+    email: ethan.tew@sunstateequip.com
+  depends_on:
+  - source('sunstate_hvr_standard_syssecfl')
+  - ref('core_sse_daily_employee')
+  - source('sunstate_hvr_standard_mslsrpfl')
+- name: territory_alignment_dashboard
+  label: Territory Alignment Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2473447
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - other('macfd_macfd_sunstate_custom_forecast')
+  - ref('rules_rules_date')
+  - ref('rules_rules_fact_job_site_nearest_branch_daily')
+  - ref('rules_rules_dim_branch_hierarchy')
+  - ref('bi_fact_fleet_on_rent_open_contract')
+  - ref('bi_dim_outside_sales_type')
+  - ref('bi_dim_employee')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_job_site')
+  - ref('core_dim_technical_revenue_type')
+  - ref('core_outside_sales')
+  - ref('core_dim_date')
+  - ref('core_catclass_master')
+  - ref('core_territory_mapping')
+  - ref('core_system_security')
+  - ref('core_fact_sales_revenue_detail')
+  - ref('core_job_site')
+  - ref('core_branches')
+- name: capex_limits
+  label: CapEx Limits
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2381180
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_capex_market_limit')
+  - ref('rpt_capex_fleet_mix')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_markets')
+- name: projected_disposals_v2
+  label: Projected Disposals V2
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2535000
+  type: workbook
+  owner:
+    name: Ben Stanley
+    email: ben.stanley@sunstateequip.com
+  depends_on:
+  - ref('rpt_rental_equipment_nrt')
+  - ref('rpt_equipment_demand')
+  - ref('rpt_capex_fleet_mix')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('core_auction_master')
+  - ref('core_equipment_master_transactions')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: rental_returns__plus__reservations_2
+  label: Rental Returns + Reservations 2
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2832018
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('core_open_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_open_contract_detail')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_employee')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+- name: ues_dashboard
+  label: UES Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748206
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_manual_commissions_adjustments')
+  - ref('rpt_commissions_estimate')
+  - ref('core_ad_employees')
+  - ref('core_ues_payments_trackvia')
+- name: oec_on_rent_dashboard
+  label: OEC on Rent Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2611160
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_analysis_group')
+  - ref('bi_dim_region')
+  - ref('bi_fact_fleet_on_rent_open_contract')
+  - ref('bi_dim_market')
+  - ref('bi_dim_super_region')
+  - ref('bi_dim_branch')
+  - ref('bi_dim_district')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_equipment_catclass')
+  - ref('bi_dim_equipment_bp_group')
+  - ref('bi_dim_job_site')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+- name: p_and_d_rates
+  label: P&D Rates
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2595203
+  type: workbook
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - ref('rpt_transportation_detail')
+  - ref('bi_dim_date')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_transport_charges')
+  - ref('bi_dim_market')
+- name: rate_proposal_process_results
+  label: Rate Proposal Process Results
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2798417
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - source('searchrebel_rate_exception_searchrebel_rate_exception')
+- name: rate_exception_app_tracking-_dev
+  label: Rate Exception App Tracking- Dev
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2730546
+  type: workbook
+  owner:
+    name: Charlotte Johnson
+    email: charlotte.johnson@sunstateequip.com
+  depends_on:
+  - source('searchrebel_rate_exception_searchrebel_rate_exception')
+- name: market_to_business_plan_comparison
+  label: Market to Business Plan Comparison
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2420029
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_income_statement_branch')
+  - ref('bi_dim_date')
+  - ref('bi_dim_lawson_accounts')
+  - ref('bi_dim_lawson_accounting_units')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_general_ledger_journals')
+  - ref('core_general_ledger_chart_detail')
+  - ref('core_general_ledger_transactions_enriched')
+  - ref('core_general_ledger_history')
+- name: old_oec_on_rent_map_dashboard
+  label: OLD OEC on Rent Map Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2593048
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_analysis_group')
+  - ref('bi_dim_region')
+  - ref('bi_fact_fleet_on_rent_open_contract')
+  - ref('bi_dim_market')
+  - ref('bi_dim_super_region')
+  - ref('bi_dim_branch')
+  - ref('bi_dim_district')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_equipment_catclass')
+  - ref('bi_dim_equipment_bp_group')
+  - ref('bi_dim_job_site')
+  - ref('core_dim_date')
+  - ref('core_dim_branch_hierarchy')
+- name: customer_segmentation_rates
+  label: Customer Segmentation Rates
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2489728
+  type: workbook
+  owner:
+    name: Jon White
+    email: jon.scheaffer@sunstateequip.com
+  depends_on:
+  - ref('pricing_customer_segmentation_exception_rates')
+  - ref('rpt_pricing_buckets')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_closed_contract_detail')
+  - ref('core_outside_sales')
+- name: p_and_d_rates_by_managers
+  label: P&D Rates by Managers
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2296858
+  type: workbook
+  owner:
+    name: Erika Yui
+    email: erika.yui@sunstateequip.com
+  depends_on:
+  - ref('rpt_transportation_detail')
+  - ref('bi_dim_date')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+- name: taft_electric_units_on_rent
+  label: Taft Electric Units on Rent
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2769790
+  type: workbook
+  owner:
+    name: Matt Chatel
+    email: matt.chatel@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_fact_fleet_on_rent_open_contract')
+  - ref('bi_dim_customer')
+  - ref('core_equipment_master_nrt')
+  - ref('core_carb_environmental_file')
+- name: open_contract_dashboard
+  label: Open Contract Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2726290
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_equipment_open_substitutions')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_equipment_substitutions')
+  - ref('core_open_contract_header')
+  - ref('core_reason_code')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+  - ref('core_rate_override_comment')
+  - ref('core_rental_quotes_pricing')
+  - ref('core_ad_employees')
+  - ref('core_open_contract_header_nrt')
+- name: new_and_reactivated_customers
+  label: New and Reactivated Customers
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2726283
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rules_rules_date')
+  - ref('bi_dim_date')
+  - ref('bi_dim_technical_revenue_type')
+  - ref('bi_fact_sales_revenue_detail')
+  - ref('bi_dim_outside_sales_type')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_outside_sales_managers')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_sic_codes')
+  - ref('core_closed_contract_header')
+  - ref('core_customer_master')
+- name: rental_returns__plus__reservations
+  label: Rental Returns + Reservations
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2824664
+  type: workbook
+  owner:
+    name: Curtis Baxter
+    email: curtis.baxter@sunstateequip.com
+  depends_on:
+  - ref('bi_dim_customer')
+  - ref('core_open_contract_header')
+  - ref('core_catclass_master')
+  - ref('core_open_contract_detail')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_employee')
+  - ref('bi_dim_customer')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_open_contract_header')
+  - ref('core_open_contract_detail')
+  - ref('core_equipment_master')
+  - ref('core_system_security')
+- name: remarketing_dashboard
+  label: Remarketing Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2748204
+  type: workbook
+  owner:
+    name: Grant Wallace
+    email: grant.wallace@sunstateequip.com
+  depends_on:
+  - ref('rpt_sold_equipment')
+  - ref('bi_dim_date')
+  - ref('bi_dim_employee_daily')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_job_site')
+  - ref('core_ad_employees')
+  - other('analytics_disposal_useful_life')
+  - ref('rpt_rental_useful_life')
+  - ref('bi_dim_equipment_hierarchy')
+  - ref('bi_dim_equipment_status')
+  - ref('bi_dim_sales_types_descriptions')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_auction_master')
+  - ref('core_rouse_pricing')
+  - ref('core_equipment_master')
+- name: op_oq_dashboard
+  label: OP OQ Dashboard
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2473436
+  type: workbook
+  owner:
+    name: Matt Trejo
+    email: matt.trejo@sunstateequip.com
+  depends_on:
+  - ref('parts_inventory_report')
+  - ref('bi_dim_branch_hierarchy')
+- name: income_statement
+  label: Income Statement
+  url: https://10az.online.tableau.com/#/site/sunstate/workbooks/2204556
+  type: workbook
+  owner:
+    name: Kyle McAninch
+    email: kyle.mcaninch@sunstateequip.com
+  depends_on:
+  - other('bi_tableau_income_statement_branch')
+  - ref('bi_dim_date')
+  - ref('bi_dim_lawson_accounts')
+  - ref('bi_dim_lawson_accounting_units')
+  - ref('bi_dim_branch_hierarchy')
+  - ref('core_general_ledger_journals')
+  - ref('core_general_ledger_chart_detail')
+  - ref('core_general_ledger_transactions_enriched')
+  - ref('core_general_ledger_history')
